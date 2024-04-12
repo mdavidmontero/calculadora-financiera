@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ExplicacionFormula from "../../shared/ExplicacionFormula";
+import { ButttonSubmitCalcular } from "../../shared/Botones";
 
 export const Monto = () => {
   const [Capital, setCapital] = useState("");
@@ -68,11 +69,7 @@ export const Monto = () => {
               className="w-full mt-3 p-3 border rounded-xl bg-gray-50"
             />
           </div>
-          <input
-            type="submit"
-            className="bg-orange-600 w-full text-white p-3 uppercase font-bold rounded-md hover:bg-orange-700 cursor-pointer transition-colors mt-2"
-            value="Calcular"
-          />
+          <ButttonSubmitCalcular type="submit" label="Calcular" />
         </form>
       </div>
       {monto && (
