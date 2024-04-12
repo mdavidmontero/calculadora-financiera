@@ -23,3 +23,18 @@ export const BotonesNav = ({ value, link }: BotonesNavProps) => {
     </div>
   );
 };
+
+type ButtonSubmit = {
+  type: string;
+  label: string;
+};
+
+export const ButttonSubmitCalcular = ({ type, label }: ButtonSubmit) => {
+  return (
+    <input
+      type={type}
+      className="bg-orange-600 w-full text-white p-3 uppercase font-bold rounded-md hover:bg-orange-700 cursor-pointer transition-colors mt-2"
+      value={label}
+    />
+  );
+};

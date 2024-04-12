@@ -2,6 +2,7 @@ import { useState } from "react";
 import { formatter } from "../../utils";
 import ExplicacionFormula from "../../shared/ExplicacionFormula";
 import { Resultado } from "../../shared/Resultado";
+import { ButttonSubmitCalcular } from "../../shared/Botones";
 
 export const MontoConCambioTasaInteres = () => {
   const [capitalInicial, setCapitalInicial] = useState(0);
@@ -118,11 +119,7 @@ export const MontoConCambioTasaInteres = () => {
               onChange={(e) => setTiempoCambioEnMeses(parseInt(e.target.value))}
             />
           </div>
-          <input
-            className="bg-orange-600 w-full text-white p-3 uppercase font-bold rounded-md hover:bg-orange-700 cursor-pointer transition-colors mt-2"
-            type="submit"
-            value={"Calcular"}
-          />
+          <ButttonSubmitCalcular type="submit" label="Calcular" />
         </form>
       </div>
       {resultado && (

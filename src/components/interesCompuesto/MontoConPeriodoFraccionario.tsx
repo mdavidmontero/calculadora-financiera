@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ExplicacionFormula from "../../shared/ExplicacionFormula";
 import { formatter } from "../../utils";
 import { Resultado } from "../../shared/Resultado";
+import { ButttonSubmitCalcular } from "../../shared/Botones";
 
 export const MontoConPeriodoFraccionario = () => {
   const [capital, setCapital] = useState(0);
@@ -83,12 +84,7 @@ export const MontoConPeriodoFraccionario = () => {
               onChange={(e) => setTasaInteres(parseFloat(e.target.value))}
             />
           </div>
-          <button
-            className="bg-orange-600 w-full text-white p-3 uppercase font-bold rounded-md hover:bg-orange-700 cursor-pointer transition-colors mt-2"
-            type="submit"
-          >
-            Calcular
-          </button>
+          <ButttonSubmitCalcular type="submit" label="Calcular" />
         </form>
       </div>
       {resultado && (

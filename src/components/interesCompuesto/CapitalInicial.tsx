@@ -3,6 +3,7 @@ import ExplicacionFormula from "../../shared/ExplicacionFormula";
 import { Spinner } from "../../layouts/Spinner";
 import { capitalInicial } from "../../types/index";
 import { Resultado } from "../../shared/Resultado";
+import { ButttonSubmitCalcular } from "../../shared/Botones";
 
 const initialState: capitalInicial = {
   montoCompuesto: 0,
@@ -89,13 +90,7 @@ export const CapitalInicial = () => {
               className="w-full mt-3 p-3 border rounded-xl bg-gray-50"
             />
           </div>
-          <button
-            type="submit"
-            className="bg-orange-600 w-full text-white p-3 uppercase font-bold rounded-md hover:bg-orange-700 cursor-pointer transition-colors mt-2"
-            value="Calcular"
-          >
-            Calcular
-          </button>
+          <ButttonSubmitCalcular type="submit" label="Calcular" />
         </form>
       </div>
       {cargando && (

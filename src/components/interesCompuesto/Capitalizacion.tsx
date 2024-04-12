@@ -3,6 +3,7 @@ import ExplicacionFormula from "../../shared/ExplicacionFormula";
 import { formatter } from "../../utils";
 import { Resultado } from "../../shared/Resultado";
 import { CapitalizacionType } from "../../types";
+import { ButttonSubmitCalcular } from "../../shared/Botones";
 
 const initialState: CapitalizacionType = {
   capital: 0,
@@ -126,11 +127,7 @@ export const Capitalizacion = () => {
               onChange={handleChange}
             />
           </div>
-          <input
-            className="bg-orange-600 w-full text-white p-3 uppercase font-bold rounded-md hover:bg-orange-700 cursor-pointer transition-colors mt-2"
-            value={"Calcular"}
-            type="submit"
-          />
+          <ButttonSubmitCalcular type="submit" label="Calcular" />
         </form>
       </div>
       {resultado !== 0 && (

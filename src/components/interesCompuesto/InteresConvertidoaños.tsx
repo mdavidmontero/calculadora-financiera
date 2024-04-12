@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ExplicacionFormula from "../../shared/ExplicacionFormula";
 import { Resultado } from "../../shared/Resultado";
+import { ButttonSubmitCalcular } from "../../shared/Botones";
 
 export const InteresConvertidoAños = () => {
   const [principal, setPrincipal] = useState(0);
@@ -128,11 +129,7 @@ export const InteresConvertidoAños = () => {
               onChange={(e) => setDays(parseFloat(e.target.value))}
             />
           </div>
-          <input
-            className="bg-orange-600 w-full text-white p-3 uppercase font-bold rounded-md hover:bg-orange-700 cursor-pointer transition-colors mt-2"
-            value="Calcular"
-            type="submit"
-          />
+          <ButttonSubmitCalcular type="submit" label="Calcular" />
         </form>
       </div>
       {parseFloat(compoundInterest) > 0 && (
