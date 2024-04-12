@@ -6,9 +6,6 @@ export const Header = () => {
     <div className="bg-blue-950 p-6">
       {location.pathname !== "/" && (
         <Link to={"/"}>
-          {/* <button className="bg-violet-600 p-2  rounded-md hover:bg-violet-700 text-white font-bold transition-colors relative  ">
-            Volver
-          </button> */}
           <img
             src={back}
             className="bg-orange-600 p-2 rounded-md  hover:bg-orange-700 text-white font-bold transition-colors absolute top-0 mt-10"

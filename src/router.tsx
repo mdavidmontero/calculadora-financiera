@@ -4,6 +4,7 @@ import { Home } from "./layouts/Home";
 import { HomeIntCompuesto } from "./views/HomeIntCompuesto";
 import { HomeIntSimple } from "./views/HomeIntSimple";
 import { HomeAnualidades } from "./views/HomeAnualidades";
+import { Footer } from "./layouts/Footer";
 
 function AppRouter() {
   return (
@@ -15,6 +16,7 @@ function AppRouter() {
         <Route path="simple" element={<HomeIntSimple />} />
         <Route path="anualidades" element={<HomeAnualidades />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
