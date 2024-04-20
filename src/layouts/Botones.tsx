@@ -6,6 +6,7 @@ const Botones = () => {
       <BotonesNav value="Interes Simple" link="simple" />
       <BotonesNav value="Interes Compuesto" link="compuesto" />
       <BotonesNav value="Tasa de Interes" link="tasainteres" />
+      <BotonesNav value="Anualidades" link="anualidades" />
     </div>
   );
 };
