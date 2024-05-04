@@ -47,7 +47,7 @@ export const DepositoAdicional = () => {
           </p>
         </ExplicacionFormula>
         <form
-          className=" my-10 bg-white shadow rounded-lg p-10 mx-5 text-start"
+          className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start"
           onSubmit={calcularImporteBancario}
         >
           <div className="my-2">
