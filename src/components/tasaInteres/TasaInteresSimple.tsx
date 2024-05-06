@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Resultado } from "../../shared/Resultado";
 import { ButttonSubmitCalcular } from "../../shared/Botones";
+import ExplicacionFormula from "../../shared/ExplicacionFormula";
 
 export function InteresSimpleCalculator() {
   const [capitalInicial, setCapitalInicial] = useState(0);
@@ -26,8 +27,14 @@ export function InteresSimpleCalculator() {
   return (
     <>
       <div className="md:w-1/2 md:h-auto">
+        <ExplicacionFormula>
+          La tasa de interés es simple cuando el interés que obtenemos al
+          vencimiento de un tiempo no se suma al capital para generar nuevos
+          intereses, es decir, el capital inicial es constante. Se calcula
+          siempre sobre el capital inicial, por lo que el interés obtenido en
+          cada periodo de tiempo siempre es el mismo.
+        </ExplicacionFormula>
         <form
-          action=""
           className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start"
           onSubmit={calcularInteresSimple}
         >
