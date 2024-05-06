@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ExplicacionFormula from "../../shared/ExplicacionFormula";
 
 interface FormData {
   monto: string;
@@ -63,6 +64,16 @@ const SistemaAmericano = () => {
   return (
     <>
       <div className="md:w-1/2 md:h-auto">
+        <ExplicacionFormula>
+          <p>
+            En el sistema de amortización americano, también conocido como
+            "interés sobre interés", el capital se amortiza al final del período
+            de pago. Cada cuota consta de dos componentes: el interés, calculado
+            sobre el saldo pendiente del préstamo, y la cuota de capital, que es
+            la misma en cada período.
+          </p>
+        </ExplicacionFormula>
+
         <form
           className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start"
           onSubmit={handleSubmit}

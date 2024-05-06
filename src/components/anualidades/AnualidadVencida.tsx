@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ButttonSubmitCalcular } from "../../shared/Botones";
 import { Resultado } from "../../shared/Resultado";
 import { Spinner } from "../../layouts/Spinner";
+import ExplicacionFormula from "../../shared/ExplicacionFormula";
 
 const AnualidadVencida = () => {
   const [datos, setDatos] = useState({
@@ -41,6 +42,20 @@ const AnualidadVencida = () => {
   return (
     <>
       <div className="md:w-1/2 md:h-auto">
+        <ExplicacionFormula>
+          <p>
+            La fórmula utilizada para calcular el monto de la anualidad vencida
+            es:
+          </p>
+          <p>M = VP * ((1 + i)^n - 1) / i</p>
+          <p>Donde:</p>
+          <ul>
+            <li>M = Monto de la anualidad vencida</li>
+            <li>VP = Valor presente</li>
+            <li>i = Tasa de interés por período (en decimal)</li>
+            <li>n = Número de períodos</li>
+          </ul>
+        </ExplicacionFormula>
         <form
           onSubmit={handleSubmit}
           className=" my-10 bg-white shadow rounded-lg p-10 mx-5 text-start"

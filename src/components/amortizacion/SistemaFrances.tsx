@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ExplicacionFormula from "../../shared/ExplicacionFormula";
 interface FormData {
   monto: string;
   tasaInteres: string;
@@ -64,6 +65,14 @@ function SistemaFrances() {
   return (
     <>
       <div className="md:w-1/2 md:h-auto">
+        <ExplicacionFormula>
+          <p>
+            En el sistema de amortización francés, el prestatario paga la misma
+            cantidad en cada período. Sin embargo, la proporción de intereses y
+            capital en cada cuota varía a lo largo del tiempo.
+          </p>
+        </ExplicacionFormula>
+
         <form
           className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start"
           onSubmit={handleSubmit}

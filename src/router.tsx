@@ -7,6 +7,7 @@ import { HomeTasaInteres } from "./views/HomeTasaInteres";
 import { Footer } from "./layouts/Footer";
 import HomeAnualidades from "./views/HomeAnualidades";
 import HomeAmortizacion from "./views/HomeAmortizacion";
+import HomeGradientes from "./views/HomeGradientes";
 
 function AppRouter() {
   return (
@@ -19,6 +20,7 @@ function AppRouter() {
         <Route path="tasainteres" element={<HomeTasaInteres />} />
         <Route path="anualidades" element={<HomeAnualidades />} />
         <Route path="amortizacion" element={<HomeAmortizacion />} />
+        <Route path="gradientes" element={<HomeGradientes />} />
       </Routes>
       <Footer />
     </BrowserRouter>

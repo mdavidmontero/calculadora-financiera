@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ExplicacionFormula from "../../shared/ExplicacionFormula";
 
 interface FormData {
   monto: string;
@@ -68,6 +69,26 @@ const SistemaAleman = () => {
   return (
     <>
       <div className="md:w-1/2 md:h-auto">
+        <ExplicacionFormula>
+          <p>
+            En el sistema de amortización alemán, cada cuota se calcula de
+            manera que el capital amortizado sea constante en cada período. La
+            fórmula para calcular la cuota es:
+          </p>
+          <p className="font-bold">Cuota = Interés + Descuento</p>
+          <p>Donde:</p>
+          <ul>
+            <li>
+              <span className="font-bold">Interés:</span> Se calcula sobre el
+              saldo pendiente del préstamo.
+            </li>
+            <li>
+              <span className="font-bold">Descuento:</span> Es el monto total a
+              pagar dividido entre el número de períodos.
+            </li>
+          </ul>
+        </ExplicacionFormula>
+
         <form
           className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start"
           onSubmit={handleSubmit}

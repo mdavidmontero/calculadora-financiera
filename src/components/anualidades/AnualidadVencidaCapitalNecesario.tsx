@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ButttonSubmitCalcular } from "../../shared/Botones";
 import { Resultado } from "../../shared/Resultado";
 import { Spinner } from "../../layouts/Spinner";
+import ExplicacionFormula from "../../shared/ExplicacionFormula";
 
 const AnualidadVencidaCapitalNecesario = () => {
   const [datos, setDatos] = useState({
@@ -39,6 +40,18 @@ const AnualidadVencidaCapitalNecesario = () => {
   return (
     <>
       <div className="md:w-1/2 md:h-auto">
+        <ExplicacionFormula>
+          <p>La fórmula utilizada para calcular el capital necesario es:</p>
+          <p>C = R * ((1 - (1 + i)^-n) / i)</p>
+          <p>Donde:</p>
+          <ul>
+            <li>C = Capital necesario</li>
+            <li>R = Renta deseada anual</li>
+            <li>i = Tasa de interés por período (en decimal)</li>
+            <li>n = Plazo en períodos</li>
+          </ul>
+        </ExplicacionFormula>
+
         <form
           onSubmit={handleSubmit}
           className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start"

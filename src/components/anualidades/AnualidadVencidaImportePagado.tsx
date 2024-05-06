@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ButttonSubmitCalcular } from "../../shared/Botones";
 import { Resultado } from "../../shared/Resultado";
 import { Spinner } from "../../layouts/Spinner";
+import ExplicacionFormula from "../../shared/ExplicacionFormula";
 
 const AnualidadVencidaImportePagado = () => {
   const [enganche, setEnganche] = useState("");
@@ -46,6 +47,19 @@ const AnualidadVencidaImportePagado = () => {
   return (
     <>
       <div className="md:w-1/2 md:h-auto">
+        <ExplicacionFormula>
+          <p>La fórmula utilizada para calcular el importe pagado es:</p>
+          <p>IP = A * ((1 - (1 + i)^-n) / i) + E</p>
+          <p>Donde:</p>
+          <ul>
+            <li>IP = Importe Pagado</li>
+            <li>A = Pago mensual</li>
+            <li>i = Tasa de interés por período (en decimal)</li>
+            <li>n = Plazo en períodos</li>
+            <li>E = Enganche</li>
+          </ul>
+        </ExplicacionFormula>
+
         <form
           onSubmit={handleSubmit}
           className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start"
