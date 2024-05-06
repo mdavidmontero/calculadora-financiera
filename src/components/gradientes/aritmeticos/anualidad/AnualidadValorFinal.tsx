@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ExplicacionFormula from "../../../../shared/ExplicacionFormula";
 
 const App: React.FC = () => {
   const [tiempo, setTiempo] = useState<string>("");
@@ -68,6 +69,12 @@ const App: React.FC = () => {
   return (
     <>
       <div className="md:w-1/2 md:h-auto">
+        <ExplicacionFormula>
+          <div className="p-4 bg-gray-100">
+            <p className="text-lg text-gray-800">Una anualidad con gradiente aritmético es una serie de pagos que aumentan o disminuyen en una cantidad constante en cada período. La fórmula para calcular su valor final es <span className="font-bold">FV = P × ((1 + g)^n - 1) / g + P × (1 + g)^n × ((1 + g)^n - 1) / g × i</span>, donde <span className="font-bold">FV</span> representa el valor final de la anualidad, <span className="font-bold">P</span> es el valor del primer pago, <span className="font-bold">g</span> es la tasa de crecimiento o decrecimiento de los pagos, <span className="font-bold">n</span> es el número total de pagos, e <span className="font-bold">i</span> es la tasa de interés por período.</p>
+          </div>
+
+        </ExplicacionFormula>
         <form className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start">
           <h1 className="h1">Anualidad Aritmética, En base al valor futuro</h1>
           <div className="my-2">

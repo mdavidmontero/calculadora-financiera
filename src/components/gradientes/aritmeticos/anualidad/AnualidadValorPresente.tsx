@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ExplicacionFormula from "../../../../shared/ExplicacionFormula";
 
 const AnualidadValorPresente = () => {
   const [tiempo, setTiempo] = useState("");
@@ -114,6 +115,12 @@ const AnualidadValorPresente = () => {
   return (
     <>
       <div className="md:w-1/2 md:h-auto">
+        <ExplicacionFormula>
+        <div className="p-4 bg-gray-100">
+  <p className="text-lg text-gray-800">El valor presente de una anualidad con gradiente aritmético es la suma de todos los pagos presentes más el valor presente del gradiente aritmético. La fórmula para calcularlo es <span className="font-bold">PV = P × [(1 - (1 + g)^-n) / i] + P × (1 + g) × [(1 - (1 + g)^-n) / i] × (1 + i)</span>, donde <span className="font-bold">PV</span> representa el valor presente de la anualidad, <span className="font-bold">P</span> es el valor del primer pago, <span className="font-bold">g</span> es la tasa de crecimiento o decrecimiento de los pagos, <span className="font-bold">n</span> es el número total de pagos, e <span className="font-bold">i</span> es la tasa de interés por período.</p>
+</div>
+
+        </ExplicacionFormula>
         <form className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start">
           <h1 className="h1">Anualidad Aritmética en base al valor presente</h1>
           <h2 className="h2"></h2>

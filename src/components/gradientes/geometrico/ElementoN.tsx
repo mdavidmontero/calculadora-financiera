@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ExplicacionFormula from "../../../shared/ExplicacionFormula";
 
 const ElementoNGeometrica: React.FC = () => {
   const [tiempo, setTiempo] = useState<string>("");
@@ -42,8 +43,7 @@ const ElementoNGeometrica: React.FC = () => {
     }
 
     const mensaje =
-      `Cuota(n): ${tiempo} | Monto inicial(P): $${inicial} | Gradiente(g): ${gradiente}% | ${
-        opcion.charAt(0).toUpperCase() + opcion.slice(1)
+      `Cuota(n): ${tiempo} | Monto inicial(P): $${inicial} | Gradiente(g): ${gradiente}% | ${opcion.charAt(0).toUpperCase() + opcion.slice(1)
       }<br><br>` + `El Valor a pagar en la Cuota ${tiempo} es: $${resultado}`;
 
     setResultadoHTML(mensaje);
@@ -77,6 +77,12 @@ const ElementoNGeometrica: React.FC = () => {
   return (
     <>
       <div className="md:w-1/2 md:h-auto">
+        <ExplicacionFormula>
+          <div className="p-4 bg-gray-100">
+            <p className="text-lg text-gray-800">El ejercicio de Elemento N Geométrico en React permite calcular el valor de un elemento específico en una serie de pagos que siguen un crecimiento geométrico, considerando un monto inicial, el número de cuotas y el porcentaje de crecimiento. El usuario debe ingresar el número de la cuota, el monto inicial y el porcentaje de crecimiento. Luego de ingresar estos datos, al hacer clic en el botón "Resultado", se calcula el valor del elemento específico en la cuota indicada y se muestra el resultado. Este cálculo se realiza utilizando la fórmula adecuada para un crecimiento geométrico, teniendo en cuenta el porcentaje de crecimiento y el número de cuotas.</p>
+          </div>
+
+        </ExplicacionFormula>
         <form className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start">
           <h1>Elemento N Geométrico</h1>
           <p>Digita los datos que tengas</p>
