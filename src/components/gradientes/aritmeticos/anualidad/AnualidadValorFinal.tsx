@@ -37,7 +37,10 @@ const App: React.FC = () => {
     setTipoGradiente(event.target.value);
   };
 
-  const calcularAnualidad = () => {
+  const calcularAnualidad = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    e.preventDefault();
     const interesDecimal = parseFloat(interes) / 100;
     const valorInt = parseInt(valor);
     const tiempoInt = parseInt(tiempo);
@@ -63,125 +66,138 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="App">
-      <h1 className="h1">Anualidad Aritmética</h1>
-      <h2 className="h2">En base al valor futuro</h2>
-      <div>
-        <p className="h3">Digite los datos que tenga</p>
-      </div>
-      <form className="container">
-        <div>
-          <label htmlFor="tiempo" className="label">
-            Tiempo
-          </label>
-          <input
-            id="tiempo"
-            type="number"
-            min="0"
-            className="texto"
-            placeholder="En meses"
-            value={tiempo}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="interes" className="label">
-            Tasa de interés
-          </label>
-          <input
-            id="interes"
-            type="number"
-            min="0"
-            max="100"
-            className="texto"
-            placeholder="0..100"
-            value={interes}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="valor" className="label">
-            Valor Final
-          </label>
-          <input
-            id="valor"
-            type="number"
-            min="0"
-            className="texto"
-            placeholder="Valor final"
-            value={valor}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="gradiente" className="label">
-            Gradiente
-          </label>
-          <input
-            id="gradiente"
-            type="number"
-            min="0"
-            className="texto"
-            placeholder="Gradiente"
-            value={gradiente}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label className="label">Tipo de gradiente</label>
-          <div>
-            <input
-              value="creciente"
-              type="radio"
-              name="tipoGradiente"
-              id="tipoGradiente1"
-              checked={tipoGradiente === "creciente"}
-              onChange={handleTipoGradienteChange}
-              required
-            />
-            <label htmlFor="tipoGradiente1" className="label">
-              Creciente
+    <>
+      <div className="md:w-1/2 md:h-auto">
+        <form className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start">
+          <h1 className="h1">Anualidad Aritmética, En base al valor futuro</h1>
+          <div className="my-2">
+            <label
+              htmlFor="tiempo"
+              className="uppercase text-gray-600 block text-xl font-bold"
+            >
+              Tiempo
             </label>
             <input
-              value="decreciente"
-              type="radio"
-              name="tipoGradiente"
-              id="tipoGradiente2"
-              checked={tipoGradiente === "decreciente"}
-              onChange={handleTipoGradienteChange}
+              id="tiempo"
+              type="number"
+              min="0"
+              className="w-full mt-3 p-3 border rounded-xl bg-gray-50"
+              placeholder="En meses"
+              value={tiempo}
+              onChange={handleChange}
               required
             />
-            <label htmlFor="tipoGradiente2" className="label">
-              Decreciente
-            </label>
           </div>
-        </div>
-      </form>
-      <div style={{ padding: "5px" }}></div>
-      <div className="botonResultado">
-        <button className="botonResultado" onClick={calcularAnualidad}>
-          Resultado
-        </button>
+          <div>
+            <label
+              htmlFor="interes"
+              className="uppercase text-gray-600 block text-xl font-bold"
+            >
+              Tasa de interés
+            </label>
+            <input
+              id="interes"
+              type="number"
+              min="0"
+              max="100"
+              className="w-full mt-3 p-3 border rounded-xl bg-gray-50"
+              placeholder="0..100"
+              value={interes}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div>
+            <label
+              htmlFor="valor"
+              className="uppercase text-gray-600 block text-xl font-bold"
+            >
+              Valor Final
+            </label>
+            <input
+              id="valor"
+              type="number"
+              min="0"
+              className="w-full mt-3 p-3 border rounded-xl bg-gray-50"
+              placeholder="Valor final"
+              value={valor}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div>
+            <label
+              htmlFor="gradiente"
+              className="uppercase text-gray-600 block text-xl font-bold"
+            >
+              Gradiente
+            </label>
+            <input
+              id="gradiente"
+              type="number"
+              min="0"
+              className="w-full mt-3 p-3 border rounded-xl bg-gray-50"
+              placeholder="Gradiente"
+              value={gradiente}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div>
+            <label className="uppercase text-gray-600 block text-xl font-bold">
+              Tipo de gradiente
+            </label>
+            <div>
+              <input
+                value="creciente"
+                type="radio"
+                name="tipoGradiente"
+                id="tipoGradiente1"
+                checked={tipoGradiente === "creciente"}
+                onChange={handleTipoGradienteChange}
+                required
+              />
+              <label
+                htmlFor="tipoGradiente1"
+                className="uppercase text-gray-600 block text-xl font-bold"
+              >
+                Creciente
+              </label>
+              <input
+                value="decreciente"
+                type="radio"
+                name="tipoGradiente"
+                id="tipoGradiente2"
+                checked={tipoGradiente === "decreciente"}
+                onChange={handleTipoGradienteChange}
+                required
+              />
+              <label
+                htmlFor="tipoGradiente2"
+                className="uppercase text-gray-600 block text-xl font-bold"
+              >
+                Decreciente
+              </label>
+            </div>
+          </div>
+          <div style={{ padding: "5px" }}></div>
+          <div className="botonResultado">
+            <button
+              className="bg-orange-600 w-full text-white p-3 uppercase font-bold rounded-md hover:bg-orange-700 cursor-pointer transition-colors mt-2"
+              onClick={calcularAnualidad}
+            >
+              Resultado
+            </button>
+          </div>
+        </form>
       </div>
-      <div style={{ padding: "5px" }}></div>
-      <div className="resultado">
-        <p
-          id="p"
-          style={{
-            color: "white",
-            textShadow: "2px 1px 4px rgba(0, 0, 0, 0.5)",
-            fontSize: "larger",
-          }}
-        >
+      <div className="md:w-2/6 md:h-1/2 my-10 bg-white shadow p-5 rounded-lg mx-5 lg:mt-52 md:mt-52 mt-0 text-center">
+        <p id="p">
           {resultado &&
             `La anualidad en base al valor final de este problema es: $${resultado}`}
         </p>
       </div>
-    </div>
+    </>
   );
 };
 

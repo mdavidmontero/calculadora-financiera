@@ -22,7 +22,7 @@ export default function HomeGradientes() {
     // Elemento N
     gradientenElementoN: <ElementoN />,
     // Valor futuro
-    valorFuturoAritmetico: <ValorFuturoAritmetico />,
+    valorFururoAritmetico: <ValorFuturoAritmetico />,
     // Valor presente
     valorPresenteAritmetico: <ValorPresenteAritmetico />,
     // Valor presente Perpetuo
