@@ -156,7 +156,7 @@ const SistemaAleman = () => {
           </button>
         </form>
       </div>
-      {amortizacionData.length > 0 && (
+       
         <div className="my-2 px-5">
           <table className="border-collapse border border-gray-800">
             <thead className="bg-gray-200">
@@ -207,7 +207,6 @@ const SistemaAleman = () => {
             </tbody>
           </table>
         </div>
-      )}
     </>
   );
 };
