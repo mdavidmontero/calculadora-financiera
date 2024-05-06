@@ -17,7 +17,7 @@ export const BotonesNav = ({ value, link }: BotonesNavProps) => {
         <input
           type="button"
           value={value}
-          className="bg-orange-500 w-full text-xl border-4 border-blue-900 text-white p-2 uppercase rounded-full hover:bg-orange-600 cursor-pointer transition-colors font-extrabold"
+          className="bg-orange-500 w-72 text-xl border-4 border-blue-900 text-white p-2 uppercase rounded-full hover:bg-orange-600 cursor-pointer transition-colors font-extrabold"
         />
       </Link>
     </div>

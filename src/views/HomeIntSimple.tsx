@@ -1,5 +1,4 @@
 import { ReactElement, useMemo, useState } from "react";
-import { DepositoAdicional } from "../components/interesCompuesto/DepositoAdicional";
 import { CapitalInicial } from "../components/interesSimple/CapitalInicial";
 import { Monto } from "../components/interesSimple/Monto";
 import { Simple } from "../components/interesSimple/Simple";
@@ -13,13 +12,12 @@ export const HomeIntSimple = () => {
   useMemo(() => seleccion, [seleccion]);
 
   const listComponents: Record<string, ReactElement> = {
-    interessimple: <Monto />,
-    capitalInicial: <Simple />,
-    tasainteres: <CapitalInicial />,
-    capitalizacion: <Tiempo />,
-    valorpresente: <TasaInteres />,
-    tiempo: <ValorPresente />,
-    monto: <DepositoAdicional />,
+    interessimple: <Simple/>,
+    capitalInicial: <CapitalInicial />,
+    tasainteres: <TasaInteres />,
+    valorpresente: <ValorPresente />,
+    tiempo: <Tiempo />,
+    monto: <Monto />,
   };
 
   return (
