@@ -13,6 +13,7 @@ export const CapitalInicial = () => {
     e.preventDefault();
     const i = parseFloat(tasaInteres) / 100;
     const n = parseInt(tiempo);
+    // Fórmula para calcular el capital inicial
     const C = (parseFloat(InteresSimple) / i) * n;
     setCapitalInicial(formatter.format(C));
   };
@@ -23,11 +24,14 @@ export const CapitalInicial = () => {
         <ExplicacionFormula>
           El Capital (C) se refiere a la cantidad de dinero que se invierte o se
           presta al comienzo de un período determinado
-          <p>* I es el monto de interes simple.</p>
+          <p>* I es el monto de interés simple.</p>
           <p>
             * % es la tasa de interés (o tasa de descuento) formato decimal.
           </p>
           <p>* t es el tiempo.</p>
+          <p>
+            Fórmula: {"C = (I / i) * t"}
+          </p>
         </ExplicacionFormula>
         <form
           onSubmit={calcularCapitalInicial}

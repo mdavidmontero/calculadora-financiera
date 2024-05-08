@@ -1,12 +1,12 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import ExplicacionFormula from "../../shared/ExplicacionFormula";
 import { ButttonSubmitCalcular } from "../../shared/Botones";
 
 export const Simple = () => {
-  const [capital, setCapital] = useState("");
-  const [tasaInteres, setTasaInteres] = useState("");
-  const [tiempo, setTiempo] = useState("");
-  const [interessimple, setInteresSimple] = useState("");
+  const [capital, setCapital] = useState<string>("");
+  const [tasaInteres, setTasaInteres] = useState<string>("");
+  const [tiempo, setTiempo] = useState<string>("");
+  const [interesSimple, setInteresSimple] = useState<string>("");
 
   const calcularInteresSimple = (
     e: React.FormEvent<HTMLFormElement> | React.ChangeEvent<HTMLInputElement>
@@ -15,6 +15,7 @@ export const Simple = () => {
 
     const i = parseFloat(tasaInteres) / 100;
     const n = parseInt(tiempo);
+    // Fórmula para calcular el interés simple
     const C = parseInt(capital) * i * n;
     setInteresSimple(C.toFixed(2));
   };
@@ -31,6 +32,7 @@ export const Simple = () => {
             * % es la tasa de interés (o tasa de descuento) formato decimal.
           </p>
           <p>* t es el tiempo.</p>
+          <p>Fórmula: I = C * i * t</p>
         </ExplicacionFormula>
         <form
           onSubmit={calcularInteresSimple}
@@ -72,9 +74,9 @@ export const Simple = () => {
           <ButttonSubmitCalcular type="submit" label="Calcular" />
         </form>
       </div>
-      {interessimple && (
+      {interesSimple && (
         <div className="md:w-2/6 md:h-1/2 my-10 bg-white shadow p-5 rounded-lg mx-5 lg:mt-52 md:mt-52 mt-0 text-center">
-          <p>El Interes Simple es : ${interessimple}</p>
+          <p>El Interés Simple es: ${interesSimple}</p>
         </div>
       )}
     </>
