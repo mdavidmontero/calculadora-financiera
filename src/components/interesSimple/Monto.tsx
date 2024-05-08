@@ -3,19 +3,20 @@ import ExplicacionFormula from "../../shared/ExplicacionFormula";
 import { ButttonSubmitCalcular } from "../../shared/Botones";
 
 export const Monto = () => {
-  const [Capital, setCapital] = useState("");
-  const [tasaInteres, setTasaInteres] = useState("");
-  const [tiempo, setTiempo] = useState("");
-  const [monto, setMonto] = useState("");
+  const [Capital, setCapital] = useState<string>("");
+  const [tasaInteres, setTasaInteres] = useState<string>("");
+  const [tiempo, setTiempo] = useState<string>("");
+  const [monto, setMonto] = useState<string>("");
 
-  const calcularCapitalInicial = (
+  const calcularMonto = (
     e: React.ChangeEvent<HTMLInputElement> | React.FormEvent<HTMLFormElement>
   ) => {
     e.preventDefault();
 
     const i = parseFloat(tasaInteres) / 100;
     const n = parseInt(tiempo);
-    const C = parseFloat(Capital) * (1 * i * n);
+    // Fórmula para calcular el monto
+    const C = parseFloat(Capital) * (1 + i * n);
     setMonto(C.toFixed(2));
   };
 
@@ -31,9 +32,10 @@ export const Monto = () => {
             * % es la tasa de interés (o tasa de descuento) formato decimal.
           </p>
           <p>* t es el tiempo.</p>
+          <p>Fórmula: M = C * (1 + i * t)</p>
         </ExplicacionFormula>
         <form
-          onSubmit={calcularCapitalInicial}
+          onSubmit={calcularMonto}
           className="md:w-1/2 md:h-auto my-10 bg-white shadow rounded-lg p-10 mx-5 text-start"
         >
           <div className="my-2">

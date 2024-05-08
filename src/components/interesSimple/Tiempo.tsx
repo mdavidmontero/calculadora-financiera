@@ -1,36 +1,55 @@
-import { useState } from "react";
-import ExplicacionFormula from "../../shared/ExplicacionFormula";
+import React, { useState, ChangeEvent, FormEvent } from "react";
 import { ButttonSubmitCalcular } from "../../shared/Botones";
+import ExplicacionFormula from "../../shared/ExplicacionFormula";
 
-export const Tiempo = () => {
-  const [ValorFuturo, setValorFuturo] = useState("");
-  const [ValorPresente, setValorPresente] = useState("");
-  const [tasaInteres, setTasaInteres] = useState("");
-  const [tiempo, setTiempo] = useState("");
+interface TiempoProps {}
+
+export const Tiempo: React.FC<TiempoProps> = () => {
+  const [ValorFuturo, setValorFuturo] = useState<string>("");
+  const [ValorPresente, setValorPresente] = useState<string>("");
+  const [tasaInteres, setTasaInteres] = useState<string>("");
+  const [tiempoEnDias, setTiempoEnDias] = useState<string>("");
+  const [tiempoAnios, setTiempoAnios] = useState<number>(0);
+  const [tiempoMeses, setTiempoMeses] = useState<number>(0);
+  const [tiempoDias, setTiempoDias] = useState<number>(0);
 
   const calcularTiempo = (
-    e: React.FormEvent<HTMLFormElement> | React.ChangeEvent<HTMLInputElement>
+    e: FormEvent<HTMLFormElement> | ChangeEvent<HTMLInputElement>
   ) => {
     e.preventDefault();
 
     const i = parseFloat(tasaInteres) / 100;
     const n = parseInt(ValorPresente);
     const futuro = parseFloat(ValorFuturo);
+    // Fórmula para calcular el tiempo en días
     const C = (futuro / n - 1) / i;
-    setTiempo(C.toFixed(2));
+    const dias = C.toFixed(2);
+    setTiempoEnDias(dias);
+
+    // Convertir los días a años, meses y días
+    const years = Math.floor(parseFloat(dias) / 365);
+    const months = Math.floor((parseFloat(dias) % 365) / 30);
+    const days = Math.floor((parseFloat(dias) % 365) % 30);
+
+    setTiempoAnios(years);
+    setTiempoMeses(months);
+    setTiempoDias(days);
   };
 
   return (
     <>
       <div className="md:w-1/2 md:h-auto">
         <ExplicacionFormula>
-          el tiempo (t) se refiere al período de tiempo durante el cual se
+          El tiempo (t) se refiere al período de tiempo durante el cual se
           aplica la tasa de interés al capital inicial para calcular los
           intereses ganados o pagados
           <p>* VF es el valor futuro.</p>
           <p>* VP es el valor presente.</p>
           <p>
             * i es la tasa de interés (o tasa de descuento) formato decimal.
+          </p>
+          <p>
+            Fórmula: {"C = (VF/VP - 1) / i"}
           </p>
         </ExplicacionFormula>
         <form
@@ -73,9 +92,12 @@ export const Tiempo = () => {
           <ButttonSubmitCalcular type="submit" label="Calcular" />
         </form>
       </div>
-      {tiempo && (
+      {tiempoEnDias && (
         <div className="md:w-2/6 md:h-1/2 my-10 bg-white shadow p-5 rounded-lg mx-5 lg:mt-52 md:mt-52 mt-0 text-center">
-          <p>El tiempo fue de: {tiempo}</p>
+          <p>
+            El tiempo fue de: {tiempoAnios} años, {tiempoMeses} meses y{" "}
+            {tiempoDias} días.
+          </p>
         </div>
       )}
     </>

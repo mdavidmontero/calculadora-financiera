@@ -65,13 +65,23 @@ function SistemaFrances() {
   return (
     <>
       <div className="md:w-1/2 md:h-auto">
-        <ExplicacionFormula>
-          <p>
-            En el sistema de amortización francés, el prestatario paga la misma
-            cantidad en cada período. Sin embargo, la proporción de intereses y
-            capital en cada cuota varía a lo largo del tiempo.
-          </p>
-        </ExplicacionFormula>
+      <ExplicacionFormula>
+  <p>
+    En el sistema de amortización francés, el prestatario paga la misma
+    cantidad en cada período. Sin embargo, la proporción de intereses y
+    capital en cada cuota varía a lo largo del tiempo.
+  </p>
+  <p className="mt-4">
+    La fórmula utilizada para calcular la cuota a pagar en el sistema de
+    amortización francés es:
+  </p>
+  <p className="mt-2">
+    <span className="font-bold">
+      Cuota a pagar = (Monto Inicial * Tasa de Interés) / (1 - (1 + Tasa de Interés)^-Numero de Periodos)
+    </span>
+  </p>
+</ExplicacionFormula>
+
 
         <form
           className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start"

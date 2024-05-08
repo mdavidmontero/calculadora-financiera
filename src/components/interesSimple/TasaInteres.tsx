@@ -4,10 +4,10 @@ import { formatter } from "../../utils";
 import { ButttonSubmitCalcular } from "../../shared/Botones";
 
 export const TasaInteres = () => {
-  const [InteresSimple, setInteresSimple] = useState("");
-  const [capital, setCapital] = useState("");
-  const [tiempo, setTiempo] = useState("");
-  const [tasaInteres, setTasaInteres] = useState("");
+  const [InteresSimple, setInteresSimple] = useState<string>("");
+  const [capital, setCapital] = useState<string>("");
+  const [tiempo, setTiempo] = useState<string>("");
+  const [tasaInteres, setTasaInteres] = useState<string>("");
 
   const calcularTasaInteres = (
     e: React.FormEvent<HTMLFormElement> | React.ChangeEvent<HTMLInputElement>
@@ -16,6 +16,7 @@ export const TasaInteres = () => {
 
     const i = parseInt(capital);
     const n = parseInt(tiempo);
+    // Fórmula para calcular la tasa de interés
     const C = (parseInt(InteresSimple) / i) * n;
     setTasaInteres(formatter.format(C * 100));
   };
@@ -27,9 +28,10 @@ export const TasaInteres = () => {
           La tasa de interés (i) en el contexto de los intereses simples se
           refiere al porcentaje del capital inicial que se acumula como
           intereses durante un período de tiempo determinado
-          <p>* I es el interes simple.</p>
+          <p>* I es el interés simple.</p>
           <p>* C es el capital inicial.</p>
           <p>* t es el tiempo.</p>
+          <p>Fórmula: i = (I / C) * t * 100</p>
         </ExplicacionFormula>
         <form
           onSubmit={calcularTasaInteres}
@@ -37,7 +39,7 @@ export const TasaInteres = () => {
         >
           <div className="my-2">
             <label className="uppercase text-gray-600 block text-xl font-bold">
-              Interes Simple (I):
+              Interés Simple (I):
             </label>
             <input
               type="number"
@@ -73,7 +75,7 @@ export const TasaInteres = () => {
       </div>
       {tasaInteres && (
         <div className="md:w-2/6 md:h-1/2 my-10 bg-white shadow p-5 rounded-lg mx-5 lg:mt-52 md:mt-52 mt-0 text-center">
-          <p>La tasa de interes fue: ${tasaInteres}</p>
+          <p>La tasa de interés fue: ${tasaInteres}</p>
         </div>
       )}
     </>

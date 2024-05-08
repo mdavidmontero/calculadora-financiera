@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ExplicacionFormula from "../../../../shared/ExplicacionFormula";
 
 const ValorFuturoAritmetico: React.FC = () => {
   const [tiempo, setTiempo] = useState<number>(0);
@@ -67,6 +68,12 @@ const ValorFuturoAritmetico: React.FC = () => {
   return (
     <>
       <div className="md:w-1/2 md:h-auto">
+        <ExplicacionFormula>
+        <div className="p-4 bg-gray-100">
+  <p className="text-lg text-gray-800">El ejercicio de Valor Futuro Aritmético en React permite calcular el valor futuro de una inversión que sigue un crecimiento aritmético, considerando un monto inicial, una tasa de interés y un gradiente. El usuario debe ingresar el tiempo en meses, la tasa de interés en porcentaje, el monto inicial de la inversión y el valor del gradiente. Además, se debe seleccionar si el gradiente es creciente o decreciente. Luego de ingresar estos datos, al hacer clic en el botón "Resultado Final", se calcula el valor futuro de la inversión y se muestra el resultado. Este cálculo se realiza utilizando las fórmulas correspondientes para cada tipo de gradiente, ya sea creciente o decreciente, y teniendo en cuenta la tasa de interés para el período especificado.</p>
+</div>
+
+        </ExplicacionFormula>
         <form className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start">
           <h1 className="h1">Valor Futuro Aritmético</h1>
           <div>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ExplicacionFormula from "../../../shared/ExplicacionFormula";
 
 const ValorFuturoGeometrico: React.FC = () => {
   const [tiempo, setTiempo] = useState<string>("");

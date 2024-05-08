@@ -28,11 +28,21 @@ export function InteresSimpleCalculator() {
     <>
       <div className="md:w-1/2 md:h-auto">
         <ExplicacionFormula>
-          La tasa de interés es simple cuando el interés que obtenemos al
-          vencimiento de un tiempo no se suma al capital para generar nuevos
-          intereses, es decir, el capital inicial es constante. Se calcula
-          siempre sobre el capital inicial, por lo que el interés obtenido en
-          cada periodo de tiempo siempre es el mismo.
+          <p>
+            El interés simple es un método de calcular el interés sobre un
+            capital inicial durante un período de tiempo determinado. La fórmula
+            para calcular el interés simple es:
+          </p>
+          <p className="mt-2">
+            <span className="font-bold">
+              Interés Simple = Capital Inicial * Tasa de Interés Anual * Tiempo
+            </span>
+          </p>
+          <p className="mt-4">
+            Esta fórmula se utiliza para calcular el interés simple en función
+            del capital inicial, la tasa de interés anual y el tiempo en años,
+            meses o días, según la frecuencia especificada.
+          </p>
         </ExplicacionFormula>
         <form
           className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start"

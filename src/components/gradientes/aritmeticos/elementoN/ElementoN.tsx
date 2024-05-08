@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ExplicacionFormula from "../../../../shared/ExplicacionFormula";
 
 const ElementoN = () => {
   const [tiempo, setTiempo] = useState<string>("");
@@ -95,6 +96,13 @@ const ElementoN = () => {
   return (
     <>
       <div className="md:w-1/2 md:h-auto">
+        <ExplicacionFormula>
+          <div className="p-4 bg-gray-100">
+            <p className="text-lg text-gray-800">El ejercicio del Elemento N Aritmético permite calcular el valor de una cuota en una serie de pagos que siguen un gradiente aritmético. En este ejercicio, se solicita al usuario ingresar el número de la cuota, el monto inicial y la cantidad del gradiente, además de seleccionar si el gradiente es creciente o decreciente. Luego de ingresar estos datos, al hacer clic en el botón "Resultado", se calcula el valor de la cuota correspondiente y se muestra el resultado. Este cálculo se realiza utilizando las fórmulas adecuadas para cada tipo de gradiente, ya sea creciente o decreciente.</p>
+          </div>
+
+
+        </ExplicacionFormula>
         <form className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start">
           <h1 className="h1">Elemento N Aritmético</h1>
           <div>

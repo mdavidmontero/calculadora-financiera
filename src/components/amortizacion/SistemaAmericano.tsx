@@ -64,15 +64,16 @@ const SistemaAmericano = () => {
   return (
     <>
       <div className="md:w-1/2 md:h-auto">
-        <ExplicacionFormula>
-          <p>
-            En el sistema de amortización americano, también conocido como
-            "interés sobre interés", el capital se amortiza al final del período
-            de pago. Cada cuota consta de dos componentes: el interés, calculado
-            sobre el saldo pendiente del préstamo, y la cuota de capital, que es
-            la misma en cada período.
-          </p>
-        </ExplicacionFormula>
+      <ExplicacionFormula>
+  <p>
+    El sistema de amortización americano, también conocido como "interés sobre interés", es un método de pago de préstamos en el que el capital se amortiza al final del período de pago. En este sistema, cada cuota consta de dos componentes: el interés, calculado sobre el saldo pendiente del préstamo, y la cuota de capital, que es la misma en cada período.
+  </p>
+  <p className="mt-4">
+    La fórmula para calcular el interés en el sistema americano es: <br />
+    <span className="font-bold">Interés = Monto Inicial * Tasa de Interés</span>
+  </p>
+</ExplicacionFormula>
+
 
         <form
           className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start"

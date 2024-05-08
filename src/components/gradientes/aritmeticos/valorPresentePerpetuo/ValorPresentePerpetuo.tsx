@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ExplicacionFormula from "../../../../shared/ExplicacionFormula";
 
 const ValorPresentePerpetuoAritmetico: React.FC = () => {
   const [interes, setInteres] = useState<string>("");
@@ -52,6 +53,12 @@ const ValorPresentePerpetuoAritmetico: React.FC = () => {
   return (
     <>
       <div className="md:w-1/2 md:h-auto">
+        <ExplicacionFormula>
+          <div className="p-4 bg-gray-100">
+            <p className="text-lg text-gray-800">El ejercicio de Valor Presente Aritmético Perpetuo en React permite calcular el valor presente de una serie de pagos perpetuos que siguen un crecimiento aritmético, considerando un monto inicial, una tasa de interés y un gradiente. El usuario debe ingresar la tasa de interés en porcentaje, el monto inicial de la inversión y el valor del gradiente. Luego de ingresar estos datos, al hacer clic en el botón "Resultado", se calcula el valor presente de la serie de pagos perpetuos y se muestra el resultado. Este cálculo se realiza utilizando la fórmula adecuada para un valor presente perpetuo aritmético, teniendo en cuenta la tasa de interés para el período especificado y el gradiente de la serie de pagos.</p>
+          </div>
+
+        </ExplicacionFormula>
         <form className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start">
           <h1>Valor Presente Aritmético Perpetuo</h1>
           <p>Digita los datos que tengas</p>

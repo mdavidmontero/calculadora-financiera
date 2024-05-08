@@ -3,17 +3,18 @@ import ExplicacionFormula from "../../shared/ExplicacionFormula";
 import { ButttonSubmitCalcular } from "../../shared/Botones";
 
 export const ValorPresente = () => {
-  const [ValorFuturo, setValorFuturo] = useState("");
-  const [tasaInteres, setTasaInteres] = useState("");
-  const [tiempo, setTiempo] = useState("");
-  const [ValorPresente, setValorPresente] = useState("");
+  const [ValorFuturo, setValorFuturo] = useState<string>("");
+  const [tasaInteres, setTasaInteres] = useState<string>("");
+  const [tiempo, setTiempo] = useState<string>("");
+  const [ValorPresente, setValorPresente] = useState<string>("");
 
   const calcularValorPresente = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const i = parseFloat(tasaInteres) / 100;
     const n = parseInt(tiempo);
-    const C = parseFloat(ValorFuturo) / 1 + i * n;
+    // Fórmula para calcular el valor presente
+    const C = parseFloat(ValorFuturo) / (1 + i * n);
     setValorPresente(C.toFixed(2));
   };
 
@@ -27,9 +28,10 @@ export const ValorPresente = () => {
           se pagarán durante un período de tiempo determinado.
           <p>* VF es el valor futuro.</p>
           <p>
-            * % es la tasa de interés (o tasa de descuento) formato decimal.
+            * i es la tasa de interés (o tasa de descuento) formato decimal.
           </p>
           <p>* t es el tiempo.</p>
+          <p>Fórmula: VP = VF / (1 + i * t)</p>
         </ExplicacionFormula>
         <form
           onSubmit={calcularValorPresente}
@@ -48,7 +50,7 @@ export const ValorPresente = () => {
           </div>
           <div className="my-2">
             <label className="uppercase text-gray-600 block text-xl font-bold">
-              Tasa de interés (%):
+              Tasa de interés (i):
             </label>
             <input
               type="number"
