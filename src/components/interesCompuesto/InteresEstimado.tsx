@@ -62,16 +62,17 @@ export const InteresEstimado = () => {
     <>
       <div className="md:w-1/2 md:h-auto">
         <ExplicacionFormula>
-          <p>
-            *Depósito inicial: La cantidad de dinero que se deposita
-            inicialmente.
+          <p className="text-lg text-gray-800">
+            El interés estimado en ahorros se refiere al interés acumulado en
+            una cuenta de ahorros o inversión a lo largo del tiempo, calculado
+            en función del capital inicial, las contribuciones anuales, el
+            número de años y la tasa de interés proporcionada.
           </p>
-          <p>
-            *Contribución anual: La cantidad de dinero que se agrega a la cuenta
-            cada año.
+          <p className="text-lg text-gray-800">**Fórmula:**</p>
+          <p className="text-lg text-gray-800 font-bold">
+            Balance Final = (Depósito inicial + (Contribución anual * Años)) *
+            (1 + Tasa de interés)^Años
           </p>
-          <p>*Años: El número de años que se van a ahorrar.</p>
-          <p>*Tasa de interés: La tasa de interés anual proporcionada.</p>
         </ExplicacionFormula>
         <form
           onSubmit={handleSubmit}

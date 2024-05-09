@@ -46,35 +46,28 @@ export const InteresConvertidoAños = () => {
         {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
         <ExplicacionFormula>
           <p>
-            El interés compuesto es una técnica que permite calcular el valor
-            futuro de una inversión. La técnica utiliza la fórmula de interés
-            compuesto:
+            El interés compuesto es una técnica financiera que permite calcular
+            el valor futuro de una inversión teniendo en cuenta tanto el capital
+            inicial como los intereses generados a lo largo del tiempo.
           </p>
-          <p>
-            <strong>
-              <em>C = P(1 + r)^t - P</em>
-            </strong>
-          </p>
-          <p>
-            Donde:
-            <ul>
-              <li>
-                <strong>
-                  <em>C = Valor futuro</em>
-                </strong>
-              </li>
-              <li>
-                <strong>
-                  <em>P = Valor inicial</em>
-                </strong>
-              </li>
-              <li>
-                <strong>
-                  <em>r = Tasa de interés anual</em>
-                </strong>
-              </li>
-            </ul>
-          </p>
+          <div className="bg-white p-4 rounded-lg shadow mt-4">
+            <p className="text-lg font-semibold mb-2">Fórmula:</p>
+            <p className="text-sm">C = P(1 + r)^t - P</p>
+            <p>
+              Donde:
+              <ul>
+                <li>
+                  <strong>C = Valor futuro</strong>
+                </li>
+                <li>
+                  <strong>P = Valor inicial</strong>
+                </li>
+                <li>
+                  <strong>r = Tasa de interés anual</strong>
+                </li>
+              </ul>
+            </p>
+          </div>
         </ExplicacionFormula>
         <form
           onSubmit={calculateCompoundInterest}

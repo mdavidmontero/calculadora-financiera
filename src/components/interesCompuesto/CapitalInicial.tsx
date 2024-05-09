@@ -38,14 +38,25 @@ export const CapitalInicial = () => {
     <>
       <div className="md:w-1/2 md:h-auto">
         <ExplicacionFormula>
-          El Valor Presente (VP) es el valor actual de una cantidad futura de
-          dinero, considerando una tasa de descuento.
-          <p>* VF es el valor futuro o cantidad futura de dinero.</p>
-          <p>
-            * j es la tasa de interés (o tasa de descuento) por período en
-            formato decimal.
+          <p className="mb-2">
+            El valor presente (VP) representa el valor actual de una cantidad
+            futura de dinero, teniendo en cuenta una tasa de descuento o
+            interés. La fórmula utilizada para calcular el valor presente en
+            este contexto es:
           </p>
-          <p>* n es el número de períodos.</p>
+          <p className="mb-2">
+            VF es el valor futuro o cantidad futura de dinero.
+          </p>
+          <p className="mb-2">
+            i es la tasa de interés por período en formato decimal.
+          </p>
+          <p className="mb-2">n es el número de períodos.</p>
+          <div className="bg-white p-4 rounded-lg shadow mt-4">
+            <p className="text-lg font-semibold mb-2">Fórmula:</p>
+            <p className="text-sm">
+              VP = VF / (1 + i)<sup>n</sup>
+            </p>
+          </div>
         </ExplicacionFormula>
         <form
           onSubmit={handleSubmit}

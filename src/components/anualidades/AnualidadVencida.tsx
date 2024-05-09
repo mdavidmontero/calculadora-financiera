@@ -43,13 +43,21 @@ const AnualidadVencida = () => {
     <>
       <div className="md:w-1/2 md:h-auto">
         <ExplicacionFormula>
-          <p>
+          <p className="text-lg text-gray-800">
+            La anualidad vencida es un concepto financiero que se refiere a una
+            serie de pagos iguales realizados al final de cada período.
+            Matemáticamente, se calcula utilizando la fórmula del valor presente
+            de una anualidad.
+          </p>
+          <p className="text-lg text-gray-800">
             La fórmula utilizada para calcular el monto de la anualidad vencida
             es:
           </p>
-          <p>M = VP * ((1 + i)^n - 1) / i</p>
-          <p>Donde:</p>
-          <ul>
+          <p className="text-lg text-gray-800 font-bold">
+            M = VP * ((1 + i)^n - 1) / i
+          </p>
+          <p className="text-lg text-gray-800">Donde:</p>
+          <ul className="list-disc pl-8">
             <li>M = Monto de la anualidad vencida</li>
             <li>VP = Valor presente</li>
             <li>i = Tasa de interés por período (en decimal)</li>

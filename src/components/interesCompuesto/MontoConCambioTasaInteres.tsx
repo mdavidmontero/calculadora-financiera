@@ -30,27 +30,15 @@ export const MontoConCambioTasaInteres = () => {
     <>
       <div className="md:w-1/2 md:h-auto">
         <ExplicacionFormula>
-          <h2 className="text-2xl font-bold">
-            Monto con cambio de tasa de interés
-          </h2>
-          <p className="mt-4">
-            El monto final de un capital inicial es calculado a partir de la
-            fórmula:
+          <p className="text-lg text-gray-800">
+            Cuando se invierte dinero en un instrumento financiero, como un
+            depósito a plazo o una inversión, la tasa de interés puede variar en
+            el tiempo.
           </p>
-          <p className="mt-4">
-            <strong>
-              Monto final = Capital inicial * (1 + Tasa de interés inicial) ^
-              Tiempo inicial
-            </strong>
-          </p>
-          <p className="mt-4">
-            El capital final es calculado a partir de la fórmula:
-          </p>
-          <p className="mt-4">
-            <strong>
-              Monto final = Monto inicial * (1 + Tasa de interés nueva) ^ Tiempo
-              cambio
-            </strong>
+          <p className="text-lg text-gray-800">**Fórmula:**</p>
+          <p className="text-lg text-gray-800 font-bold">
+            Monto final = (Capital inicial * (1 + Tasa de interés
+            inicial)^Tiempo inicial) * (1 + Tasa de interés nueva)^Tiempo cambio
           </p>
         </ExplicacionFormula>
         <form

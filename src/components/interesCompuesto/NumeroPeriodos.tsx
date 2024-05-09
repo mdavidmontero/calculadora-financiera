@@ -23,9 +23,25 @@ export const NumeroPeriodos = () => {
     <>
       <div className="md:w-1/2 md:h-auto my-10">
         <ExplicacionFormula>
-          <p>VF es el monto compuesto final.</p>
-          <p>P es el capital inicial.</p>
-          <p>r es la tasa de interés por período.</p>
+          <p className="text-lg text-gray-800">
+            El número de períodos en el contexto del interés compuesto se
+            refiere al tiempo necesario para que una inversión o deuda alcance
+            un cierto valor futuro, dados un capital inicial, una tasa de
+            interés y el monto compuesto final.
+          </p>
+          <p className="text-lg text-gray-800">
+            Se calcula utilizando la fórmula del interés compuesto:
+          </p>
+          <p className="text-lg text-gray-800 font-bold">
+            n = (ln(VF) - ln(P)) / ln(1 + r)
+          </p>
+          <p className="text-lg text-gray-800">Donde:</p>
+          <ul className="list-disc pl-8">
+            <li>n = Número de períodos</li>
+            <li>VF = Monto compuesto final</li>
+            <li>P = Capital inicial</li>
+            <li>r = Tasa de interés por período (en decimal)</li>
+          </ul>
         </ExplicacionFormula>
         <form
           onSubmit={calculatePeriods}

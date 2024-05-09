@@ -49,13 +49,22 @@ const ValorPresentePrestamo = () => {
     <>
       <div className="md:w-1/2 md:h-auto">
         <ExplicacionFormula>
-          <p>
-            La fórmula utilizada para calcular el valor presente del préstamo
-            es:
+          <p className="text-lg text-gray-800">
+            El valor presente de un préstamo se refiere al valor actual de una
+            serie de pagos futuros que se realizarán como parte de un préstamo,
+            descontados a una tasa de interés específica. Este concepto es
+            importante en las finanzas para determinar el valor actual de los
+            flujos de efectivo futuros.
           </p>
-          <p>VP = P * ((1 - (1 + i)^-n) / i)</p>
-          <p>Donde:</p>
-          <ul>
+          <p className="text-lg text-gray-800">
+            La fórmula utilizada para calcular el valor presente de un préstamo
+            es la siguiente:
+          </p>
+          <p className="text-lg text-gray-800 font-bold">
+            VP = P * ((1 - (1 + i)^-n) / i)
+          </p>
+          <p className="text-lg text-gray-800">Donde:</p>
+          <ul className="list-disc pl-8">
             <li>VP = Valor Presente</li>
             <li>P = Pago anual</li>
             <li>i = Tasa de interés por período (en decimal)</li>

@@ -54,10 +54,29 @@ const ValorPresentePerpetuoAritmetico: React.FC = () => {
     <>
       <div className="md:w-1/2 md:h-auto">
         <ExplicacionFormula>
-          <div className="p-4 bg-gray-100">
-            <p className="text-lg text-gray-800">El ejercicio de Valor Presente Aritmético Perpetuo en React permite calcular el valor presente de una serie de pagos perpetuos que siguen un crecimiento aritmético, considerando un monto inicial, una tasa de interés y un gradiente. El usuario debe ingresar la tasa de interés en porcentaje, el monto inicial de la inversión y el valor del gradiente. Luego de ingresar estos datos, al hacer clic en el botón "Resultado", se calcula el valor presente de la serie de pagos perpetuos y se muestra el resultado. Este cálculo se realiza utilizando la fórmula adecuada para un valor presente perpetuo aritmético, teniendo en cuenta la tasa de interés para el período especificado y el gradiente de la serie de pagos.</p>
-          </div>
-
+          <p className="text-gray-800">
+            El Valor Presente Perpetuo Aritmético se utiliza para calcular el
+            valor presente de una serie infinita de pagos que crecen o
+            disminuyen aritméticamente en el tiempo. Este concepto es útil en
+            situaciones en las que se espera que los pagos sigan un patrón de
+            crecimiento o decrecimiento constante en el tiempo, como por
+            ejemplo, en algunos tipos de pensiones o rentas vitalicias.
+          </p>
+          <p className="text-gray-800">
+            La fórmula para calcular el Valor Presente Perpetuo Aritmético es la
+            siguiente:
+          </p>
+          <p className="text-gray-800 font-bold">
+            Valor Presente = P / i + g / i^2
+          </p>
+          <p className="text-gray-800">
+            Donde:
+            <br />
+            P = Monto inicial o primer pago
+            <br />
+            i = Tasa de interés por período, expresada en decimales
+            <br />g = Gradiente o cambio en los pagos por período
+          </p>
         </ExplicacionFormula>
         <form className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start">
           <h1>Valor Presente Aritmético Perpetuo</h1>

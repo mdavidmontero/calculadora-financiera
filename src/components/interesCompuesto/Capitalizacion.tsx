@@ -51,23 +51,22 @@ export const Capitalizacion = () => {
     <>
       <div className="md:w-1/2 md:h-auto">
         <ExplicacionFormula>
-          <p>
-            El capitalización es el proceso de acumular el capital en un
+          <p className="mb-2">
+            La capitalización es el proceso de acumular el capital en un
             determinado tiempo, en función de la tasa de interés y el periodo de
             capitalización.
           </p>
-          <p>
+          <p className="mb-2">
             El cálculo del capital acumulado se realiza utilizando la fórmula:
           </p>
-          <p>
-            <strong>
-              <em>
-                Capital acumulado = Capital inicial * (1 + Tasa de interés / 100
-                / Periodos de capitalización) ^ (Periodos de capitalización *
-                Tiempo)
-              </em>
-            </strong>
-          </p>
+          <div className="bg-white p-4 rounded-lg shadow mt-4">
+            <p className="text-lg font-semibold mb-2">Fórmula:</p>
+            <p className="text-sm">
+              Capital acumulado = Capital inicial * (1 + Tasa de interés / 100 /
+              Periodos de capitalización)
+              <sup>(Periodos de capitalización * Tiempo)</sup>
+            </p>
+          </div>
         </ExplicacionFormula>
         <form
           onSubmit={handleSubmit}

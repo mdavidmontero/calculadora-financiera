@@ -43,14 +43,24 @@ const AnualidadVencida = () => {
     <>
       <div className="md:w-1/2 md:h-auto">
         <ExplicacionFormula>
-          <p>La fórmula utilizada para calcular la renta necesaria es:</p>
-          <p>R = M / ((1 + i)^n - 1) / i</p>
-          <p>Donde:</p>
-          <ul>
-            <li>R = Renta necesaria</li>
-            <li>M = Monto deseado al final del período</li>
-            <li>i = Tasa de interés por período (en decimal)</li>
-            <li>n = Plazo en períodos</li>
+          <p className="text-lg text-gray-800">
+            En las finanzas, una anualidad vencida se refiere a una serie de
+            pagos periódicos realizados al final de cada período, donde el
+            primer pago se realiza al final del primer período. Estos pagos son
+            iguales en cantidad y ocurren al final de cada período.
+          </p>
+          <p className="text-lg text-gray-800">
+            La fórmula utilizada para calcular la renta necesaria en una
+            anualidad vencida es la siguiente:
+          </p>
+          <p className="text-lg text-gray-800 font-bold">
+            Renta = M / (((1 + i)^n - 1) / i)
+          </p>
+          <p className="text-lg text-gray-800">Donde:</p>
+          <ul className="list-disc pl-8">
+            <li>M: Monto deseado al final del período</li>
+            <li>i: Tasa de interés por período (en decimal)</li>
+            <li>n: Plazo en períodos</li>
           </ul>
         </ExplicacionFormula>
 

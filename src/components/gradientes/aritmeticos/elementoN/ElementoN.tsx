@@ -97,11 +97,26 @@ const ElementoN = () => {
     <>
       <div className="md:w-1/2 md:h-auto">
         <ExplicacionFormula>
-          <div className="p-4 bg-gray-100">
-            <p className="text-lg text-gray-800">El ejercicio del Elemento N Aritmético permite calcular el valor de una cuota en una serie de pagos que siguen un gradiente aritmético. En este ejercicio, se solicita al usuario ingresar el número de la cuota, el monto inicial y la cantidad del gradiente, además de seleccionar si el gradiente es creciente o decreciente. Luego de ingresar estos datos, al hacer clic en el botón "Resultado", se calcula el valor de la cuota correspondiente y se muestra el resultado. Este cálculo se realiza utilizando las fórmulas adecuadas para cada tipo de gradiente, ya sea creciente o decreciente.</p>
-          </div>
-
-
+          <p className="text-lg text-gray-800">
+            El Elemento N en una serie aritmética se refiere al término enésimo
+            de la serie. En una serie aritmética, cada término se obtiene
+            sumando una constante fija al término anterior. El Elemento N se
+            calcula utilizando la fórmula general para el término enésimo de una
+            serie aritmética.
+          </p>
+          <p className="text-lg text-gray-800">
+            La fórmula para calcular el Elemento N en una serie aritmética es:
+          </p>
+          <p className="text-lg text-gray-800 font-bold">
+            Elemento N = Valor inicial + (Número de cuotas - 1) * Gradiente
+          </p>
+          <p className="text-lg text-gray-800">
+            Esta fórmula representa la idea de que el Elemento N es igual al
+            valor inicial más la suma acumulativa de los gradientes hasta el
+            término enésimo. Dependiendo de si el gradiente es creciente o
+            decreciente, el signo del gradiente puede ser positivo o negativo en
+            la fórmula.
+          </p>
         </ExplicacionFormula>
         <form className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start">
           <h1 className="h1">Elemento N Aritmético</h1>

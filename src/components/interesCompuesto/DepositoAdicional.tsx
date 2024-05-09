@@ -32,18 +32,18 @@ export const DepositoAdicional = () => {
     <>
       <div className="md:w-1/2 md:h-auto">
         <ExplicacionFormula>
-          <p>
-            * Depósito inicial: La cantidad de dinero que se deposita
-            inicialmente.
+          <p className="text-lg text-gray-800">
+            En el ámbito bancario, un depósito adicional se refiere a una
+            cantidad de dinero que se agrega a una cuenta bancaria después del
+            depósito inicial. Esta adición puede realizarse en cualquier momento
+            durante la vida útil de la cuenta. Los depósitos adicionales pueden
+            provenir de fuentes como ingresos regulares, bonificaciones,
+            herencias u otros ingresos adicionales.
           </p>
-          *Tasa de interés: La tasa de interés anual proporcionada.
-          <p>
-            *Período de tiempo transcurrido: El número de meses que han pasado
-            desde el depósito inicial hasta el momento del retiro parcial.
-          </p>
-          <p>
-            *Depósito adicional: La cantidad de dinero que se deposita o se
-            retira adicionalmente después del período de tiempo inicial.
+          <p className="text-lg text-gray-800">**Fórmula:**</p>
+          <p className="text-lg text-gray-800 font-bold">
+            Importe final = (Capital inicial + Depósito adicional) * (1 + Tasa
+            de interés / 12 / 100)^(Tiempo transcurrido) - Retiro realizado
           </p>
         </ExplicacionFormula>
         <form

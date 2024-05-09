@@ -22,11 +22,18 @@ export const TasaInteres = () => {
     <>
       <div className="md:w-1/2 md:h-auto">
         <ExplicacionFormula>
-          Se necesita conocer el capital inicial, el monto compuesto final y el
-          número de períodos.
-          <p>* P es el capital inicial.</p>
-          <p>*VF es el monto compuesto final.</p>
-          <p>*n es el número de períodos.</p>
+          <p className="text-lg text-gray-800">
+            La "Tasa de Interés" se refiere al porcentaje aplicado a un capital
+            inicial para determinar el crecimiento de dicho capital en un
+            período determinado.
+          </p>
+          <p className="text-lg text-gray-800">
+            La tasa de interés se puede calcular utilizando la fórmula del
+            interés compuesto:
+          </p>
+          <p className="text-lg text-gray-800 font-bold">
+            r = (VF / P) ^ (1 / n) - 1
+          </p>
         </ExplicacionFormula>
         <form
           onSubmit={calcularTasaInteres}

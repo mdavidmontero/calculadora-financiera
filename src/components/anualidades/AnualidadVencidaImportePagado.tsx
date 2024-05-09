@@ -48,10 +48,22 @@ const AnualidadVencidaImportePagado = () => {
     <>
       <div className="md:w-1/2 md:h-auto">
         <ExplicacionFormula>
-          <p>La fórmula utilizada para calcular el importe pagado es:</p>
-          <p>IP = A * ((1 - (1 + i)^-n) / i) + E</p>
-          <p>Donde:</p>
-          <ul>
+          <p className="text-lg text-gray-800">
+            En el contexto de las finanzas personales y la adquisición de bienes
+            de consumo duraderos, como automóviles o viviendas, a menudo se
+            utiliza la anualidad vencida con importe pagado para calcular el
+            importe total que se habrá pagado al finalizar el período de
+            financiamiento, teniendo en cuenta un enganche inicial, pagos
+            mensuales y una tasa de interés fija.
+          </p>
+          <p className="text-lg text-gray-800">
+            La fórmula utilizada para calcular el importe pagado es:
+          </p>
+          <p className="text-lg text-gray-800 font-bold">
+            IP = A * ((1 - (1 + i)^-n) / i) + E
+          </p>
+          <p className="text-lg text-gray-800">Donde:</p>
+          <ul className="list-disc pl-8">
             <li>IP = Importe Pagado</li>
             <li>A = Pago mensual</li>
             <li>i = Tasa de interés por período (en decimal)</li>

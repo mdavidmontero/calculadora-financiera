@@ -24,15 +24,23 @@ export const MontoConPeriodoFraccionario = () => {
     <>
       <div className="md:w-1/2 md:h-auto">
         <ExplicacionFormula>
-          <p>
-            {" "}
-            Capital inicial: Es la cantidad de dinero inicialmente invertida o
-            depositada.
+          <p className="text-lg text-gray-800">
+            El "Monto con Período Fraccionario" se refiere al cálculo del monto
+            final de un capital cuando el período de tiempo incluye meses
+            completos y una fracción de un mes. Esto es común en situaciones
+            donde los intereses se capitalizan mensualmente y el tiempo
+            transcurrido no es un número entero de años.
           </p>
-          <p>Tasa de interés: capitalizable mensualmente. </p>
-          <p>
-            Periodo de tiempo: Este período incluye meses completos y una
-            fracción de un mes.
+          <p className="text-lg text-gray-800">**Fórmula:**</p>
+          <p className="text-lg text-gray-800 font-bold">
+            Monto final = Capital inicial * (1 + Tasa de interés mensual) ^
+            (Meses + (Días / 30))
+          </p>
+          <p className="text-lg text-gray-800">
+            Esta fórmula te permite calcular el monto final de un capital
+            inicial con un período de tiempo que incluye meses completos y una
+            fracción de un mes, utilizando la tasa de interés mensual y el
+            tiempo total en meses.
           </p>
         </ExplicacionFormula>
         <form

@@ -59,13 +59,21 @@ const AnualidadVencidaCapitalizacion = () => {
     <>
       <div className="md:w-1/2 md:h-auto">
         <ExplicacionFormula>
-          <p>
+          <p className="text-lg text-gray-800">
+            La anualidad vencida con capitalización es un concepto financiero
+            que implica el cálculo del monto final en una cuenta después de un
+            período determinado, teniendo en cuenta la capitalización de los
+            intereses.
+          </p>
+          <p className="text-lg text-gray-800">
             La fórmula utilizada para calcular el monto final en la cuenta
             después de un período de capitalización es:
           </p>
-          <p>MF = P * ((1 + i/m)^n - 1) / (i/m)</p>
-          <p>Donde:</p>
-          <ul>
+          <p className="text-lg text-gray-800 font-bold">
+            MF = P * ((1 + i/m)^n - 1) / (i/m)
+          </p>
+          <p className="text-lg text-gray-800">Donde:</p>
+          <ul className="list-disc pl-8">
             <li>MF = Monto final en la cuenta</li>
             <li>P = Pago anual</li>
             <li>i = Tasa de interés nominal por período (en decimal)</li>

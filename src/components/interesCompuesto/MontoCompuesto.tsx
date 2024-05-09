@@ -32,15 +32,20 @@ export const MontoCompuesto = () => {
     <>
       <div className="md:w-1/2 md:h-auto">
         <ExplicacionFormula>
-          El cálculo del monto compuesto es una forma de determinar el valor
-          futuro de una inversión inicial, teniendo en cuenta tanto el capital
-          inicial como los intereses generados durante cierto período de tiempo.
-          <p>* P es el depósito inicial o capital inicial.</p>
-          <p> * r es la tasa de interés anual (en formato decimal).</p>
           <p>
-            {" "}
-            * n es el número de veces que se capitaliza el interés por año..
+            El cálculo del monto compuesto es una forma de determinar el valor
+            futuro de una inversión inicial, teniendo en cuenta tanto el capital
+            inicial como los intereses generados durante cierto período de
+            tiempo.
           </p>
+          <p>* P es el depósito inicial o capital inicial.</p>
+          <p>* r es la tasa de interés anual (en formato decimal).</p>
+          <p>* n es el número de veces que se capitaliza el interés por año.</p>
+          <div className="bg-white p-4 rounded-lg shadow mt-4">
+            <p className="text-lg font-semibold mb-2">Fórmula:</p>
+            <p className="text-sm">Monto Compuesto = P * (1 + r/n)^(n*t)</p>
+            <p className="text-sm">Intereses = Monto Compuesto - P</p>
+          </div>
         </ExplicacionFormula>
         <form
           action=""

@@ -100,10 +100,42 @@ const ValorPresenteAritmetico: React.FC = () => {
     <>
       <div className="md:w-1/2 md:h-auto">
         <ExplicacionFormula>
-          <div className="p-4 bg-gray-100">
-            <p className="text-lg text-gray-800">El ejercicio de Valor Presente Aritmético en React permite calcular el valor presente de una serie de pagos que siguen un crecimiento aritmético, considerando un monto inicial, una tasa de interés y un gradiente. El usuario debe ingresar el tiempo en meses, la tasa de interés en porcentaje, el monto inicial de la inversión y el valor del gradiente. Además, se debe seleccionar si el gradiente es creciente o decreciente. Luego de ingresar estos datos, al hacer clic en el botón "Resultado", se calcula el valor presente de la serie de pagos y se muestra el resultado. Este cálculo se realiza utilizando las fórmulas correspondientes para cada tipo de gradiente, ya sea creciente o decreciente, y teniendo en cuenta la tasa de interés para el período especificado.</p>
-          </div>
-
+          <p className="text-gray-800">
+            El Valor Presente Aritmético se utiliza para calcular el valor
+            presente de una serie de pagos que crecen o disminuyen
+            aritméticamente en el tiempo. Este concepto es útil en situaciones
+            en las que se espera que los pagos sigan un patrón de crecimiento o
+            decrecimiento constante en el tiempo, como por ejemplo, en algunos
+            tipos de préstamos o inversiones con pagos regulares.
+          </p>
+          <p className="text-gray-800">
+            Las fórmulas para calcular el Valor Presente Aritmético son las
+            siguientes:
+          </p>
+          <p className="text-gray-800 font-bold">
+            Para gradiente aritmético creciente:
+          </p>
+          <p className="text-gray-800 font-bold">
+            Valor Presente = (P * [(1 + i)^n - 1] / i) + g * [((1 + i)^n - 1) /
+            i - n]
+          </p>
+          <p className="text-gray-800 font-bold">
+            Para gradiente aritmético decreciente:
+          </p>
+          <p className="text-gray-800 font-bold">
+            Valor Presente = (P * [(1 + i)^n - 1] / i) - g * [((1 + i)^n - 1) /
+            i - n]
+          </p>
+          <p className="text-gray-800">
+            Donde:
+            <br />
+            P = Monto inicial o primer pago
+            <br />
+            i = Tasa de interés por período, expresada en decimales
+            <br />
+            n = Número de períodos
+            <br />g = Gradiente o cambio en los pagos por período
+          </p>
         </ExplicacionFormula>
         <form className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start">
           <h1>Valor Presente Aritmético</h1>

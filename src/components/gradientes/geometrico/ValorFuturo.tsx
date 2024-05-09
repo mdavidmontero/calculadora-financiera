@@ -112,11 +112,17 @@ const ValorFuturoGeometrico: React.FC = () => {
   return (
     <>
       <div className="md:w-1/2 md:h-auto">
+        <ExplicacionFormula>
+          <p className="text-lg text-gray-800">
+            El valor futuro en un gradiente geométrico se calcula utilizando la
+            siguiente fórmula:
+          </p>
+          <p className="text-lg text-gray-800 font-bold">
+            VF = P / (i - g) * ((1 + i)<sup>n</sup> - (1 + g)<sup>n</sup>)
+          </p>
+        </ExplicacionFormula>
         <form className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start">
           <h1>Valor Futuro Geométrico</h1>
-          <div>
-            <p>Digita los datos que tengas</p>
-          </div>
           <div>
             <label className="uppercase text-gray-600 block text-xl font-bold">
               Tiempo

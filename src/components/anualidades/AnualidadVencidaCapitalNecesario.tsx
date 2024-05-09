@@ -41,10 +41,20 @@ const AnualidadVencidaCapitalNecesario = () => {
     <>
       <div className="md:w-1/2 md:h-auto">
         <ExplicacionFormula>
-          <p>La fórmula utilizada para calcular el capital necesario es:</p>
-          <p>C = R * ((1 - (1 + i)^-n) / i)</p>
-          <p>Donde:</p>
-          <ul>
+          <p className="text-lg text-gray-800">
+            La anualidad vencida con capital necesario es un concepto financiero
+            que implica el cálculo del capital necesario para obtener una renta
+            deseada anual durante un período determinado, teniendo en cuenta una
+            tasa de interés específica.
+          </p>
+          <p className="text-lg text-gray-800">
+            La fórmula utilizada para calcular el capital necesario es:
+          </p>
+          <p className="text-lg text-gray-800 font-bold">
+            C = R * ((1 - (1 + i)^-n) / i)
+          </p>
+          <p className="text-lg text-gray-800">Donde:</p>
+          <ul className="list-disc pl-8">
             <li>C = Capital necesario</li>
             <li>R = Renta deseada anual</li>
             <li>i = Tasa de interés por período (en decimal)</li>

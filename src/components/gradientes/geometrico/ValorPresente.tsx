@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ExplicacionFormula from "../../../shared/ExplicacionFormula";
 
 interface State {
   tiempo: string;
@@ -92,6 +93,29 @@ const ValorPresenteGeometrico: React.FC = () => {
   return (
     <>
       <div className="md:w-1/2 md:h-auto">
+        <ExplicacionFormula>
+          <p className="text-lg text-gray-800">
+            El Valor Presente Geométrico se utiliza para calcular el valor
+            presente de una serie de flujos de efectivo que siguen un gradiente
+            geométrico.
+          </p>
+          <p className="text-lg text-gray-800">
+            La fórmula utilizada para calcular el Valor Presente Geométrico es:
+          </p>
+          <p className="text-lg text-gray-800 font-bold">
+            VP = P / (i - g) * ((1 + g) / (1 + i))^n - 1
+          </p>
+          <p className="text-lg text-gray-800">Donde:</p>
+          <ul className="list-disc pl-8">
+            <li className="text-lg text-gray-800">VP es el Valor Presente.</li>
+            <li className="text-lg text-gray-800">P es el monto inicial.</li>
+            <li className="text-lg text-gray-800">i es la tasa de interés.</li>
+            <li className="text-lg text-gray-800">g es el gradiente.</li>
+            <li className="text-lg text-gray-800">
+              n es el número de periodos.
+            </li>
+          </ul>
+        </ExplicacionFormula>
         <div className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start">
           <h1>Valor Presente Geométrico</h1>
           <div>

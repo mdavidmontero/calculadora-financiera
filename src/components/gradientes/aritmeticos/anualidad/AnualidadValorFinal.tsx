@@ -70,10 +70,38 @@ const App: React.FC = () => {
     <>
       <div className="md:w-1/2 md:h-auto">
         <ExplicacionFormula>
-          <div className="p-4 bg-gray-100">
-            <p className="text-lg text-gray-800">Una anualidad con gradiente aritmético es una serie de pagos que aumentan o disminuyen en una cantidad constante en cada período. La fórmula para calcular su valor final es <span className="font-bold">FV = P × ((1 + g)^n - 1) / g + P × (1 + g)^n × ((1 + g)^n - 1) / g × i</span>, donde <span className="font-bold">FV</span> representa el valor final de la anualidad, <span className="font-bold">P</span> es el valor del primer pago, <span className="font-bold">g</span> es la tasa de crecimiento o decrecimiento de los pagos, <span className="font-bold">n</span> es el número total de pagos, e <span className="font-bold">i</span> es la tasa de interés por período.</p>
-          </div>
-
+          <p className="text-lg text-gray-800">
+            Una anualidad con gradiente aritmético es una serie de pagos que
+            aumentan o disminuyen en una cantidad constante en cada período. La
+            fórmula para calcular su valor final es:
+          </p>
+          <p className="text-lg text-gray-800">
+            <span className="font-bold">
+              FV = P × ((1 + g)^n - 1) / g + P × (1 + g)^n × ((1 + g)^n - 1) / g
+              × i
+            </span>
+          </p>
+          <p className="text-lg text-gray-800">Donde:</p>
+          <ul className="list-disc ml-8 text-lg text-gray-800">
+            <li>
+              <span className="font-bold">FV</span>: Representa el valor final
+              de la anualidad.
+            </li>
+            <li>
+              <span className="font-bold">P</span>: Es el valor del primer pago.
+            </li>
+            <li>
+              <span className="font-bold">g</span>: Es la tasa de crecimiento o
+              decrecimiento de los pagos.
+            </li>
+            <li>
+              <span className="font-bold">n</span>: Es el número total de pagos.
+            </li>
+            <li>
+              <span className="font-bold">i</span>: Es la tasa de interés por
+              período.
+            </li>
+          </ul>
         </ExplicacionFormula>
         <form className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start">
           <h1 className="h1">Anualidad Aritmética, En base al valor futuro</h1>

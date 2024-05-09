@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ExplicacionFormula from "../../../shared/ExplicacionFormula";
 
 function ValorPresentePerpetuo() {
   const [interes, setInteres] = useState("");
@@ -33,11 +34,27 @@ function ValorPresentePerpetuo() {
   return (
     <>
       <div className="md:w-1/2 md:h-auto">
+        <ExplicacionFormula>
+          <p className="text-lg text-gray-800">
+            El Valor Presente Geométrico Perpetuo se utiliza para calcular el
+            valor presente de una serie de flujos de efectivo que siguen un
+            gradiente geométrico de forma perpetua.
+          </p>
+          <p className="text-lg text-gray-800">
+            La fórmula utilizada para calcular el Valor Presente Geométrico
+            Perpetuo es:
+          </p>
+          <p className="text-lg text-gray-800 font-bold">VP = P / (i - g)</p>
+          <p className="text-lg text-gray-800">Donde:</p>
+          <ul className="list-disc pl-8">
+            <li className="text-lg text-gray-800">VP es el Valor Presente.</li>
+            <li className="text-lg text-gray-800">P es el monto inicial.</li>
+            <li className="text-lg text-gray-800">i es la tasa de interés.</li>
+            <li className="text-lg text-gray-800">g es el gradiente.</li>
+          </ul>
+        </ExplicacionFormula>
         <div className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start">
           <h1 className="h1">Valor Presente Geométrico Perpetuo</h1>
-          <div>
-            <p className="h3"> Digita los datos que tengas</p>
-          </div>
           <form className="container">
             <div>
               <label
