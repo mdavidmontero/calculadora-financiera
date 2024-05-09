@@ -110,19 +110,10 @@ const ElementoN = () => {
           <p className="text-lg text-gray-800 font-bold">
             Elemento N = Valor inicial + (Número de cuotas - 1) * Gradiente
           </p>
-          <p className="text-lg text-gray-800">
-            Esta fórmula representa la idea de que el Elemento N es igual al
-            valor inicial más la suma acumulativa de los gradientes hasta el
-            término enésimo. Dependiendo de si el gradiente es creciente o
-            decreciente, el signo del gradiente puede ser positivo o negativo en
-            la fórmula.
-          </p>
+       
         </ExplicacionFormula>
         <form className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start">
-          <h1 className="h1">Elemento N Aritmético</h1>
-          <div>
-            <p className="h3">Digite los datos que tenga</p>
-          </div>
+        
           <div className="my-2">
             <label
               htmlFor="tiempo"

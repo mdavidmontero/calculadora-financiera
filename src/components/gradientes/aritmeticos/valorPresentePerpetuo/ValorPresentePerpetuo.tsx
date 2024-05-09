@@ -79,8 +79,7 @@ const ValorPresentePerpetuoAritmetico: React.FC = () => {
           </p>
         </ExplicacionFormula>
         <form className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start">
-          <h1>Valor Presente Aritmético Perpetuo</h1>
-          <p>Digita los datos que tengas</p>
+         
           <div className="my-2">
             <label>Tasa de interes</label>
             <input

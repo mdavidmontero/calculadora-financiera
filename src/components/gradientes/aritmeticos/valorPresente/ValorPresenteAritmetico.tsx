@@ -138,8 +138,7 @@ const ValorPresenteAritmetico: React.FC = () => {
           </p>
         </ExplicacionFormula>
         <form className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start">
-          <h1>Valor Presente Aritmético</h1>
-          <p>Digita los datos que tengas</p>
+          
           <div>
             <label className="uppercase text-gray-600 block text-xl font-bold">
               Tiempo

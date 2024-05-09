@@ -54,7 +54,7 @@ function ValorPresentePerpetuo() {
           </ul>
         </ExplicacionFormula>
         <div className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start">
-          <h1 className="h1">Valor Presente Geométrico Perpetuo</h1>
+     
           <form className="container">
             <div>
               <label

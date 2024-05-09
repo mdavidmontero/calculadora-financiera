@@ -104,7 +104,7 @@ const App: React.FC = () => {
           </ul>
         </ExplicacionFormula>
         <form className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start">
-          <h1 className="h1">Anualidad Aritmética, En base al valor futuro</h1>
+        
           <div className="my-2">
             <label
               htmlFor="tiempo"

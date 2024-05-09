@@ -117,10 +117,10 @@ const ValorPresenteGeometrico: React.FC = () => {
           </ul>
         </ExplicacionFormula>
         <div className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start">
-          <h1>Valor Presente Geométrico</h1>
+
           <div>
             <div className="my-2">
-              <p>Ingrese los datos:</p>
+              
               <label className="uppercase text-gray-600 block text-xl font-bold">
                 Tiempo
               </label>

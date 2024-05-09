@@ -7,7 +7,7 @@ const ValorFuturoAritmetico: React.FC = () => {
   const [inicial, setInicial] = useState<number>(0);
   const [gradiente, setGradiente] = useState<number>(0);
   const [tipoGradiente, setTipoGradiente] = useState<string>("creciente");
-  const [resultado, setResultado] = useState<string>("");
+  const [resultado, setResultado] = useState("");
 
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -99,10 +99,7 @@ const ValorFuturoAritmetico: React.FC = () => {
           </p>
         </ExplicacionFormula>
         <form className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start">
-          <h1 className="h1">Valor Futuro Aritmético</h1>
-          <div>
-            <p className="h3">Digita los datos que tengas</p>
-          </div>
+        
           <div className="my-2">
             <label
               htmlFor="tiempo"
@@ -201,7 +198,11 @@ const ValorFuturoAritmetico: React.FC = () => {
           </button>
         </form>
       </div>
-      <div dangerouslySetInnerHTML={{ __html: resultado }}></div>
+      <div className="md:w-2/6 md:h-1/2 my-10 bg-white shadow p-5 rounded-lg mx-5 lg:mt-52 md:mt-52 mt-0 text-center">
+        <p id="p">
+          El Valor Futuro Aritmetico de este problema es: ${resultado}
+        </p>
+      </div>
     </>
   );
 };

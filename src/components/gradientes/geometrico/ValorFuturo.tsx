@@ -122,7 +122,7 @@ const ValorFuturoGeometrico: React.FC = () => {
           </p>
         </ExplicacionFormula>
         <form className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start">
-          <h1>Valor Futuro Geométrico</h1>
+          
           <div>
             <label className="uppercase text-gray-600 block text-xl font-bold">
               Tiempo

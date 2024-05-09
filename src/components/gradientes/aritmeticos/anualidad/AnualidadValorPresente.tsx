@@ -150,7 +150,6 @@ const AnualidadValorPresente = () => {
           </ul>
         </ExplicacionFormula>
         <form className="my-10 bg-white shadow rounded-lg p-10 mx-5 text-start">
-          <h1 className="h1">Anualidad Aritmética en base al valor presente</h1>
           <h2 className="h2"></h2>
           <div className="my-2">
             <label
